@@ -1,3 +1,18 @@
-h1 {
-  color: red;
-}
+// global
+@import 'global/fonts.scss';
+@import 'global/variables.scss';
+@import 'global/global.scss';
+
+// blocks
+@import 'blocks/page.scss';
+@import 'blocks/page-header.scss';
+@import 'blocks/logo.scss';
+@import 'blocks/site-nav.scss';
+@import 'blocks/promo.scss';
+@import 'blocks/feedback.scss';
+@import 'blocks/features.scss';
+@import 'blocks/bicycles-types.scss';
+@import 'blocks/video.scss';
+@import 'blocks/page-footer.scss';
+@import 'blocks/map.scss';
+@import 'blocks/contacts.scss';
