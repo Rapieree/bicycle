@@ -1,0 +1,14 @@
+.page-footer {
+  padding-bottom: 96px;
+  margin: 0 auto;
+  max-width: 957px;
+
+  @include tablet {
+    padding: 0 35px 53px 35px;
+    max-width: none;
+  }
+
+  @include mobile {
+    padding: 0 0 51px 0;
+  }
+}

@@ -1,0 +1,84 @@
+.feedback {
+  padding-top: 4px;
+
+  @include tablet {
+    padding-top: 70px;
+    margin: 0 auto;
+    width: 41.8vw;
+  }
+
+  @include mobile {
+    padding-left: 16px;
+    padding-right: 16px;
+    width: auto;
+    max-width: 321px;
+  }
+}
+
+.feedback h2 {
+  margin: 0 0 20px 0;
+  padding: 0;
+  @include font(600);
+  font-size: 17px;
+  line-height: 28px;
+  color: $text-color-light;
+  letter-spacing: -0.005em;
+  text-align: center;
+
+  @include tablet {
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: $text-color-darkest;
+  }
+
+  @include mobile {
+    margin-bottom: 20px;
+  }
+}
+
+.feedback input {
+  margin-bottom: 20px;
+  padding: 13px 28px 9px 28px;
+  width: 100%;
+  font-size: 15px;
+  line-height: 24px;
+  color: $text-color-darken;
+  border: 1px solid #C9CCD4;
+
+  @include tablet {
+    padding: 11px 21px 11px 21px;
+  }
+
+  @include mobile {
+    padding: 13px 26px 9px 26px;
+  }
+}
+
+.feedback input::placeholder {
+  @include font(400);
+  font-size: 15px;
+  line-height: 24px;
+  color: $text-color-darken;
+  opacity: 0.5;
+}
+
+.feedback__name input {
+  border-radius: 4px;
+}
+
+.feedback__phone input {
+  border-radius: 6px;
+}
+
+.feedback button {
+  margin: 0;
+  padding: 15px 0;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  background-color: $special-contrast-color;
+  @include font(600);
+  font-size: 15px;
+  line-height: 21px;
+  color: $text-color-darkest;
+}

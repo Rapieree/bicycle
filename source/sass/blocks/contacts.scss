@@ -1,0 +1,36 @@
+.contacts {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: max-content max-content;
+  column-gap: 90px;
+  row-gap: 20px;
+  justify-content: center;
+  align-items: center;
+
+  @include mobile {
+    grid-template-columns: none;
+    padding: 0 22px 0 30px;
+    width: auto;
+  }
+}
+
+.contacts a {
+  @include font(400);
+  font-size: 16px;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.contacts a:not(:last-child) {
+  @include mobile {
+    margin-bottom: 22px;
+  }
+}
+
+.contacts svg {
+  margin-right: 15px;
+  align-self: flex-end;
+}

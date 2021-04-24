@@ -1,0 +1,59 @@
+.map {
+  margin-bottom: 38px;
+
+  @include tablet {
+    margin-bottom: 20px;
+  }
+}
+
+.map h2 {
+  @include font(600);
+
+  margin: 0 0 30px 0;
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: -0.005em;
+  color: $text-color-darken;
+  text-align: center;
+
+  @include tablet {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  @include mobile {
+    padding: 0 17px;
+    font-size: 18px;
+  }
+}
+
+.map p {
+  margin: 0 auto 41px auto;
+  @include font(400);
+  width: 555px;
+  font-size: 17px;
+  line-height: 31px;
+  color: $text-color-darkest-opacity;
+  text-align: center;
+
+  @include tablet {
+    margin-bottom: 20px;
+    width: auto;
+  }
+
+  @include mobile {
+    padding: 0 17px;
+    margin-bottom: 25px;
+  }
+}
+
+.map img {
+  @include tablet {
+    height: 545px;
+    object-fit: cover;
+  }
+
+  @include mobile {
+    height: 250px;
+  }
+}

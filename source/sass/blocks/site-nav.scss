@@ -1,0 +1,126 @@
+.site-nav__button {
+  display: none;
+
+  @include tablet {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: $special-contrast-color;
+  }
+}
+
+.site-nav__button--nojs {
+  display: none;
+}
+
+.site-nav__button--open {
+  @include tablet {
+    display: block;
+    background-color: transparent;
+
+    .menu-nav__icon-menu {
+      fill: none;
+    }
+
+    .menu-nav__icon-cross {
+      stroke: $cross-icon-color;
+    }
+  }
+}
+
+.site-nav__button--close {
+  @include tablet {
+    display: block;
+
+    .menu-nav__icon-menu {
+      fill: $menu-icon-color;
+    }
+
+    .menu-nav__icon-cross {
+      stroke: none;
+    }
+  }
+}
+
+.site-nav__list {
+  margin: 0;
+  padding: 0 13px 9px 13px;
+  list-style-type: none;
+  display: none;
+  grid-template-columns: repeat(4, max-content);
+  column-gap: 20px;
+  justify-content: space-between;
+  position: relative;
+  color: $text-color-light;
+
+
+  @include tablet {
+    padding: 100px 0 138px 0;
+    grid-template-columns: 1fr;
+    background-color: $main-background-color;
+    row-gap: 30px;
+    column-gap: 0;
+  }
+}
+
+.site-nav__list::before {
+  content: "";
+  width: calc(100% - 6px);
+  height: 1px;
+  background-color: $main-background-color;
+  opacity: 0.2;
+  position: absolute;
+  left: 3px;
+  bottom: 0;
+}
+
+.site-nav__list--close {
+  @include tablet {
+    display: none;
+  }
+}
+
+.site-nav__list--open {
+  @include tablet {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+}
+
+.site-nav__list--nojs {
+  display: grid;
+}
+
+.site-nav__list li  {
+  max-width: 195px;
+
+  @include tablet {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+.site-nav__list a {
+  @include font(300);
+
+  display: block;
+  padding: 0 10px;
+  font-size: 16px;
+  line-height: 32px;
+  color: inherit;
+  letter-spacing: -0.005em;
+  opacity: 0.7;
+  text-decoration: none;
+
+  @include tablet {
+    padding: 17px 0;
+    font-size: 20px;
+    line-height: 140%;
+    color: $text-color-menu;
+    text-align: center;
+    background-color: $menu-button-color;
+  }
+}
