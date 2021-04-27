@@ -1,5 +1,6 @@
 .contacts {
   margin: 0 auto;
+  padding-right: 15px;
   display: grid;
   grid-template-columns: max-content max-content;
   column-gap: 90px;
@@ -8,29 +9,52 @@
   align-items: center;
 
   @include mobile {
-    grid-template-columns: none;
-    padding: 0 22px 0 30px;
-    width: auto;
+    grid-template-columns: min-content;
+    padding: 0 20px;
+    row-gap: 0;
   }
 }
 
 .contacts a {
   @include font(400);
+
   font-size: 16px;
   line-height: 22px;
   color: rgba(0, 0, 0, 0.5);
   text-decoration: none;
   display: flex;
   align-items: center;
+  justify-content: center;
+
+  @include mobile {
+    margin-right: -5px;
+  }
+}
+
+.contacts a:hover,
+.contacts a:focus {
+  opacity: 0.7;
+  color: rgba(0, 0, 0, 1);
+}
+
+.contacts a:active {
+  opacity: 1;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .contacts a:not(:last-child) {
   @include mobile {
-    margin-bottom: 22px;
+    margin-bottom: 23px;
+  }
+}
+
+.contacts__phone {
+  @include mobile {
+    margin-left: -13px;
   }
 }
 
 .contacts svg {
   margin-right: 15px;
-  align-self: flex-end;
+  align-self: center;
 }

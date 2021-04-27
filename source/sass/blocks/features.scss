@@ -1,6 +1,6 @@
 .features {
   padding: 0 137px;
-  margin-bottom: 130px;
+  margin-bottom: 153px;
 
   @include tablet {
     padding: 0 106px;
@@ -9,6 +9,7 @@
 
   @include mobile {
     padding: 0 15px;
+    margin-bottom: 79px;
   }
 }
 
@@ -93,5 +94,5 @@
 }
 
 .features__list li:nth-child(-n+9)::before {
-  content: '0' counter(customCounter);
+  content: "0" counter(customCounter);
 }

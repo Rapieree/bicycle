@@ -1,5 +1,6 @@
 .site-nav__button {
   display: none;
+  cursor: pointer;
 
   @include tablet {
     display: block;
@@ -19,13 +20,26 @@
     display: block;
     background-color: transparent;
 
-    .menu-nav__icon-menu {
+    .site-nav__icon-menu {
       fill: none;
     }
 
-    .menu-nav__icon-cross {
+    .site-nav__icon-cross {
       stroke: $cross-icon-color;
     }
+  }
+}
+
+.site-nav__button--open:hover,
+.site-nav__button--open:focus {
+  & .site-nav__icon-cross {
+    stroke: $cross-icon-color-hover;
+  }
+}
+
+.site-nav__button--open:active {
+  & .site-nav__icon-cross {
+    stroke: $cross-icon-color-active;
   }
 }
 
@@ -33,12 +47,21 @@
   @include tablet {
     display: block;
 
-    .menu-nav__icon-menu {
+    .site-nav__icon-menu {
       fill: $menu-icon-color;
     }
 
-    .menu-nav__icon-cross {
+    .site-nav__icon-cross {
       stroke: none;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $special-contrast-color-hover;
+    }
+
+    &:active {
+      background-color: $special-contrast-color-active;
     }
   }
 }
@@ -46,19 +69,18 @@
 .site-nav__list {
   margin: 0;
   padding: 0 13px 9px 13px;
+  display: grid;
   list-style-type: none;
-  display: none;
   grid-template-columns: repeat(4, max-content);
   column-gap: 20px;
   justify-content: space-between;
   position: relative;
   color: $text-color-light;
 
-
   @include tablet {
-    padding: 100px 0 138px 0;
+    padding: 0;
     grid-template-columns: 1fr;
-    background-color: $main-background-color;
+    grid-auto-rows: min-content;
     row-gap: 30px;
     column-gap: 0;
   }
@@ -75,26 +97,7 @@
   bottom: 0;
 }
 
-.site-nav__list--close {
-  @include tablet {
-    display: none;
-  }
-}
-
-.site-nav__list--open {
-  @include tablet {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 1;
-  }
-}
-
-.site-nav__list--nojs {
-  display: grid;
-}
-
-.site-nav__list li  {
+.site-nav__list li {
   max-width: 195px;
 
   @include tablet {
@@ -114,13 +117,75 @@
   letter-spacing: -0.005em;
   opacity: 0.7;
   text-decoration: none;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
 
   @include tablet {
-    padding: 17px 0;
+    font-weight: 400;
+    opacity: 1;
+    padding: 16px 50px 16px 16px;
+    letter-spacing: normal;
     font-size: 20px;
-    line-height: 140%;
+    line-height: 28px;
     color: $text-color-menu;
-    text-align: center;
     background-color: $menu-button-color;
+
+    &::before {
+      content: "";
+      border: solid rgba(44, 46, 63, 0.5);
+      border-width: 0 2px 2px 0;
+      display: block;
+      padding: 3px;
+      position: absolute;
+      right: 25px;
+      top: calc(50%);
+      transform: rotate(-45deg) translateY(-50%);
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $menu-button-color-hover;
+    }
+
+    &:active {
+      background-color: $menu-button-color-active;
+    }
+  }
+}
+
+.site-nav--close .site-nav__list {
+  @include tablet {
+    display: none;
+    user-select: none;
+  }
+}
+
+.site-nav--open {
+  @include tablet {
+    visibility: visible;
+    background-color: $main-background-color;
+    padding: 100px 0 138px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    overflow-y: auto;
+  }
+}
+
+.site-nav--nojs {
+  @include tablet {
+    background-color: $main-background-color;
+    padding: 100px 0 138px 0;
   }
 }

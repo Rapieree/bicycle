@@ -1,0 +1,150 @@
+.video {
+  margin-bottom: 152px;
+  padding: 122px 17.77% 0 17.77%;
+  position: relative;
+
+  @include tablet {
+    margin-bottom: 70px;
+    padding: 70px 17.18% 0 17.18%;
+  }
+
+  @include mobile {
+    padding: 84px 5% 0 5%;
+  }
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 87.8%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: $background-darken-color;
+    z-index: -1;
+
+    @include tablet {
+      height: 82.93%;
+    }
+
+    @include mobile {
+      height: 88.88%;
+    }
+  }
+}
+
+.video h2 {
+  @include font(600);
+
+  margin: 0 0 19px -10px;
+  padding: 0;
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: -0.005em;
+  color: $text-color-light;
+  text-align: center;
+
+  @include tablet {
+    margin-right: -5px;
+    font-size: 24px;
+  }
+
+  @include mobile {
+    margin-right: 0;
+  }
+}
+
+.video p {
+  @include font(300);
+
+  margin: 0 auto 56px auto;
+  padding: 0;
+  width: 340px;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: -0.005em;
+  color: $text-color-light;
+  opacity: 0.7;
+  text-align: center;
+
+  @include tablet {
+    margin-bottom: 40px;
+    width: 429px;
+  }
+
+  @include mobile {
+    margin-bottom: 54px;
+    width: auto;
+  }
+}
+
+.video__wrapper {
+  position: relative;
+  padding-top: 56.18%;
+}
+
+.video__wrapper img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.video__wrapper button {
+  padding: 0;
+  border: none;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: $special-contrast-color;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @include tablet {
+    width: 90px;
+    height: 90px;
+  }
+
+  @include mobile {
+    width: 65px;
+    height: 65px;
+  }
+
+  &::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 9px solid transparent;
+    border-left: 13px solid #070707;
+    border-bottom: 9px solid transparent;
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+    @include tablet {
+      border-top-width: 12.5px;
+      border-left-width: 18px;
+      border-bottom-width: 12.5px;
+    }
+
+    @include mobile {
+      border-top-width: 9px;
+      border-left-width: 13px;
+      border-bottom-width: 9px;
+    }
+  }
+}
+
+.video__wrapper button:hover,
+.video__wrapper button:focus {
+  background-color: $special-contrast-color-hover;
+}
+
+.video__wrapper button:active {
+  background-color: $special-contrast-color-active;
+}

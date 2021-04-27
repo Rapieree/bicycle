@@ -16,9 +16,10 @@
 }
 
 .feedback h2 {
+  @include font(600);
+
   margin: 0 0 20px 0;
   padding: 0;
-  @include font(600);
   font-size: 17px;
   line-height: 28px;
   color: $text-color-light;
@@ -37,13 +38,14 @@
 }
 
 .feedback input {
+  appearance: none;
   margin-bottom: 20px;
   padding: 13px 28px 9px 28px;
   width: 100%;
   font-size: 15px;
   line-height: 24px;
   color: $text-color-darken;
-  border: 1px solid #C9CCD4;
+  border: 1px solid #c9ccd4;
 
   @include tablet {
     padding: 11px 21px 11px 21px;
@@ -54,8 +56,18 @@
   }
 }
 
+.feedback input::-webkit-outer-spin-button,
+.feedback input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.feedback input:hover {
+  border-color: #68686a;
+}
+
 .feedback input::placeholder {
   @include font(400);
+
   font-size: 15px;
   line-height: 24px;
   color: $text-color-darken;
@@ -71,14 +83,25 @@
 }
 
 .feedback button {
+  @include font(600);
+
+  cursor: pointer;
   margin: 0;
   padding: 15px 0;
   width: 100%;
   border: none;
   border-radius: 6px;
   background-color: $special-contrast-color;
-  @include font(600);
   font-size: 15px;
   line-height: 21px;
   color: $text-color-darkest;
+}
+
+.feedback button:hover,
+.feedback button:focus {
+  background-color: $special-contrast-color-hover;
+}
+
+.feedback button:active {
+  background-color: $special-contrast-color-active;
 }

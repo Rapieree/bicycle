@@ -1,5 +1,6 @@
 .page-footer {
-  padding-bottom: 96px;
+  width: 100%;
+  padding-bottom: 98px;
   margin: 0 auto;
   max-width: 957px;
 
@@ -9,6 +10,6 @@
   }
 
   @include mobile {
-    padding: 0 0 51px 0;
+    padding: 0 0 52px 0;
   }
 }

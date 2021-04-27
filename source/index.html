@@ -16,43 +16,34 @@
 <body class="page__body">
   <header class="page-header">
     <div class="page-header__wrapper">
-      <a class="page-header__logo logo">
+      <a class="page-header__logo">
         <img src="img/logo.svg" width="68" height="21" alt="Логотип">
       </a>
-
-      <nav class="page-header__menu site-nav">
-        <button class="page-header__button site-nav__button site-nav__button--close" type="button">
+      <nav class="page-header__menu site-nav site-nav--nojs">
+        <button class="page-header__button site-nav__button site-nav__button--nojs" type="button" aria-label="Открыть меню">
           <svg class="site-nav__icon" width="30" height="30">
             <use class="site-nav__icon-menu" xlink:href="img/sprite_auto.svg#icon-menu"></use>
             <use class="site-nav__icon-cross" xlink:href="img/sprite_auto.svg#icon-cross"></use>
           </svg>
         </button>
-        <ul class="site-nav__list site-nav__list--close">
-          <li><a href="#">О нас</a></li>
-          <li><a href="#">Виды велосипедов</a></li>
-          <li><a href="#">Видео про велосипеды</a></li>
-          <li><a href="#">Контакты</a></li>
+        <ul class="site-nav__list">
+          <li><a href="#features-label">О нас</a></li>
+          <li><a href="#bicycles-types-label">Виды велосипедов</a></li>
+          <li><a href="#video-label">Видео про велосипеды</a></li>
+          <li><a href="#map-label">Контакты</a></li>
         </ul>
       </nav>
-
       <div class="page-header__promo promo">
         <picture>
-          <source type="image/webp" media="max-width: 767px"
-            srcset="img/promo/black-bike-mobile.webp 1x, img/promo/black-bike-mobile@2x.webp 2x">
-          <source type="image/webp" media="max-width: 1023px"
-            srcset="img/promo/black-bike-tablet.webp 1x, img/promo/black-bike-tablet@2x.webp 2x">
-          <source type="image/webp" media="min-width: 1024px"
+          <source type="image/webp"
             srcset="img/promo/black-bike-desktop.webp 1x, img/promo/black-bike-desktop@2x.webp 2x">
           <!-- 1x: 1440/825px; 2x: 2880/1650px -->
           <img src="img/promo/black-bike-desktop.jpg" srcset="img/promo/black-bike-desktop@2x.jpg 2x" width="1440"
             height="825" alt="Велосипед">
-          <!-- <img src="img/video/video-plug-desktop.jpg" srcset="img/promo/black-bike-desktop@2x.jpg 2x" width="1440"
-            height="825" alt="Велосипед"> -->
         </picture>
         <h1>Мы продаем велосипеды</h1>
         <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
       </div>
-
       <section class="page-header__feedback feedback">
         <h2>Заполните поля ниже и мы подберем велосипед Вашей мечты</h2>
         <form name="feedback">
@@ -62,16 +53,15 @@
           </div>
           <div class="feedback__phone">
             <label class="visually-hidden" for="feedback-phone">Введите номер телефона</label>
-            <input type="text" id="feedback-phone" placeholder="Введите Ваш номер телефона" required>
+            <input type="number" id="feedback-phone" placeholder="Введите Ваш номер телефона" required>
           </div>
           <button type="submit">Подобрать велосипед мечты</button>
         </form>
       </section>
-      </div>
+    </div>
   </header>
-
   <main>
-    <section class="features">
+    <section class="features" id="features-label">
       <h2>Несколько фактов о нас</h2>
       <ol class="features__list">
         <li>Самый широкий выбор велосипедов!</li>
@@ -80,35 +70,83 @@
         <li>Профессиональные консультации!</li>
       </ol>
     </section>
-
-    <section class="bicycles-types">
+    <section class="bicycles-types" id="bicycles-types-label">
       <h2>Виды велосипедов</h2>
-
       <ul class="bicycles-types__list">
+        <li class="bicycles-types__item">
+          <div class="bicycles-types__img-wrapper">
+            <picture>
+              <source type="image/webp"
+                srcset="img/bicycles-types/bicycle-road-desktop.webp 1x, img/bicycles-types/bicycle-road-desktop@2x.webp 2x">
+              <!-- 1x: 342/503px; 2x: 684/1006px -->
+              <img src="img/bicycles-types/bicycle-road-desktop.jpg"
+                srcset="img/bicycles-types/bicycle-road-desktop@2x.jpg 2x" alt="Фотография дорожного велосипеда"
+                width="342" height="503">
+            </picture>
+          </div>
+          <p>Дорожный велосипед</p>
+        </li>
+        <li class="bicycles-types__item">
+          <div class="bicycles-types__img-wrapper">
+            <picture>
+              <source type="image/webp"
+                srcset="img/bicycles-types/bicycle-mountain-desktop.webp 1x, img/bicycles-types/bicycle-mountain-desktop@2x.webp 2x">
+              <!-- 1x: 342/566px; 2x: 684/1132px -->
+              <img src="img/bicycles-types/bicycle-mountain-desktop.jpg"
+                srcset="img/bicycles-types/bicycle-mountain-desktop@2x.jpg 2x" alt="Фотография горного велосипеда"
+                width="342" height="566">
+            </picture>
+          </div>
+          <p>Горный велосипед</p>
+        </li>
+        <li class="bicycles-types__item">
+          <div class="bicycles-types__img-wrapper">
+            <picture>
+              <source type="image/webp"
+                srcset="img/bicycles-types/bicycle-child-desktop.webp 1x, img/bicycles-types/bicycle-child-desktop@2x.webp 2x">
+              <!-- 1x: 342/503px; 2x: 684/1024px -->
+              <img src="img/bicycles-types/bicycle-child-desktop.jpg"
+                srcset="img/bicycles-types/bicycle-child-desktop@2x.jpg 2x" alt="Фотография детского велосипеда"
+                width="342" height="512">
+            </picture>
+          </div>
+          <p>Детский велосипед</p>
+        </li>
       </ul>
     </section>
+    <section class="video" id="video-label">
+      <h2>Видео про велосипеды</h2>
+      <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
+      <div class="video__wrapper">
+        <picture>
+          <source type="image/webp"
+            srcset="img/video/video-plug-desktop.webp 1x, img/video/video-plug-desktop@2x.webp 2x">
+          <!-- 1x: 929/522px; 2x: 1858/1044px -->
+          <img src="img/video/video-plug-desktop.jpg" srcset="img/video/video-plug-desktop@2x.jpg 2x" width="929"
+            height="522" alt="Видео про велосипеды">
+        </picture>
+        <button type="button" aria-label="Воспроизвести видео"></button>
+      </div>
+    </section>
   </main>
-
   <footer class="page-footer">
-    <section class="map">
-        <h2>Как нас найти?</h2>
-        <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
+    <section class="map" id="map-label">
+      <h2>Как нас найти?</h2>
+      <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
+      <div class="map__frame">
         <a href="https://goo.gl/maps/hQuDEx2dtfJrKLNg7"
           title="Магазин находится по адресу: ул. Большая Конюшенная 19, Санкт-Петербург">
           <picture>
-            <source type="image/webp" media="max-width: 767px"
-              srcset="img/map/map-mobile.webp 1x, img/map/map-mobile@2x.webp 2x">
-            <source type="image/webp" media="max-width: 1023px"
-              srcset="img/map/map-tablet.webp 1x, img/map/map-tablet@2x.webp 2x">
-            <source type="image/webp" media="min-width: 1024px"
-              srcset="img/map/map-desktop.webp 1x, img/map/map-desktop@2x.webp 2x">
+            <source type="image/webp" srcset="img/map/map-original.webp 1x, img/map/map-original@2x.webp 2x">
             <!-- 1x: 957/530px; 2x: 1914/1060px -->
-            <img src="img/map/map-desktop.png" srcset="img/map/map-desktop@2x.png 2x" width="957" height="530"
+            <img src="img/map/map-original.png" srcset="img/map/map-original.png 2x" width="957" height="530"
               alt="Магазин находится по адресу: ул. Большая Конюшенная 19, Санкт-Петербург">
           </picture>
         </a>
+      </div>
     </section>
     <section class="contacts">
+      <h2 class="visually-hidden">Наши контактые данные</h2>
       <a class="contacts__email" href="mailto:puteshestviemechta@gmail.ru">
         <p class="visually-hidden">Наша почта</p>
         <svg width="26" height="20">
@@ -125,13 +163,13 @@
       </a>
     </section>
   </footer>
-
-  <template id="map-frame">
+  <template id="map-frame-template">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123638!2d30.320894615666862!3d59.93879686904849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1619259302675!5m2!1sru!2sru"
       width="957" height="530" title="Магазин находится по адресу: ул. Большая Конюшенная 19, Санкт-Петербург">
     </iframe>
   </template>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
