@@ -126,6 +126,7 @@ var mainFunc = function () {
   };
 
   /* global IMask*/
+  // eslint-disable-next-line new-cap
   var feedbackPhoneMask = IMask(feedbackPhone, feedbackMaskOptions);
 
   feedbackPhoneMask();

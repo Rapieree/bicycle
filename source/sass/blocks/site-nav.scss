@@ -30,17 +30,13 @@
   }
 }
 
-.site-nav__button--open:hover,
-.site-nav__button--open:focus {
-  & .site-nav__icon-cross {
-    stroke: $cross-icon-color-hover;
-  }
+.site-nav__button--open:hover .site-nav__icon-cross,
+.site-nav__button--open:focus .site-nav__icon-cross {
+  stroke: $cross-icon-color-hover;
 }
 
-.site-nav__button--open:active {
-  & .site-nav__icon-cross {
-    stroke: $cross-icon-color-active;
-  }
+.site-nav__button--open:active .site-nav__icon-cross {
+  stroke: $cross-icon-color-active;
 }
 
 .site-nav__button--close {

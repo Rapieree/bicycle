@@ -135,13 +135,13 @@
       display: none;
     }
   }
+}
 
-  .bicycles-types__img-wrapper {
-    padding-top: 166%;
+.bicycles-types__item:nth-child(3n + 2) .bicycles-types__img-wrapper {
+  padding-top: 166%;
 
-    @include tablet {
-      padding-top: 111%;
-    }
+  @include tablet {
+    padding-top: 111%;
   }
 }
 
