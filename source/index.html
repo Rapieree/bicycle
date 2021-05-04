@@ -5,7 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Bicycle - продажа велосипедов</title>
+  <title>Продажа велосипедов по низким ценам | Moon</title>
+  <meta name="description" content="Подбор, продажа, доставка разных видов велосипедов по всей России для взрослых и детей.">
   <link rel="preload" href="fonts/opensans-light.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="fonts/opensans-regular.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="fonts/opensans-bold.woff2" as="font" type="font/woff2" crossorigin />
@@ -49,11 +50,11 @@
         <form name="feedback">
           <div class="feedback__name">
             <label class="visually-hidden" for="feedback-name">Введите ваше имя</label>
-            <input type="text" id="feedback-name" placeholder="Введите Ваше Имя" required>
+            <input type="text" id="feedback-name" placeholder="Введите Ваше Имя" minlength="2" maxlength="100" required>
           </div>
           <div class="feedback__phone">
             <label class="visually-hidden" for="feedback-phone">Введите номер телефона</label>
-            <input type="tel" id="feedback-phone" placeholder="Введите Ваш номер телефона" required>
+            <input type="tel" id="feedback-phone" placeholder="Введите Ваш номер телефона" minlength="18" maxlength="18" required>
           </div>
           <button type="submit">Подобрать велосипед мечты</button>
         </form>
@@ -137,7 +138,7 @@
         <a href="https://goo.gl/maps/hQuDEx2dtfJrKLNg7"
           title="Магазин находится по адресу: ул. Большая Конюшенная 19, Санкт-Петербург">
           <picture>
-            <source type="image/webp" srcset="img/map/map-original.webp 1x, img/map/map-original@2x.webp 2x">
+            <source type="image/webp" srcset="img/map/map-original.webp 1x, img/map/map-original.webp 2x">
             <!-- 1x: 957/530px; 2x: 1914/1060px -->
             <img src="img/map/map-original.png" srcset="img/map/map-original.png 2x" width="957" height="530"
               alt="Магазин находится по адресу: ул. Большая Конюшенная 19, Санкт-Петербург">

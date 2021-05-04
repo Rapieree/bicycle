@@ -1,6 +1,6 @@
 'use strict';
 
-var mainFunc = function () {
+function mainFunc() {
   // Меню
   var menuButton = document.querySelector('.site-nav__button');
   var menu = document.querySelector('.site-nav');
@@ -126,10 +126,7 @@ var mainFunc = function () {
   };
 
   /* global IMask*/
-  var feedbackPhoneMask = IMask(feedbackPhone, feedbackMaskOptions);
-
-  feedbackPhoneMask();
-};
-
+  IMask(feedbackPhone, feedbackMaskOptions);
+}
 
 mainFunc();

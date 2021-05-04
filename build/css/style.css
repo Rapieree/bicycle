@@ -301,7 +301,7 @@ img {
 @media (max-width: 1023px) {
   .promo {
     position: relative;
-    min-height: 44.3vw;
+    min-height: 44.27vw;
     overflow: hidden; } }
 
 @media (max-width: 767px) {
@@ -407,6 +407,7 @@ img {
   font-size: 15px;
   line-height: 24px;
   color: #1c1c1c;
+  background-color: #ffffff;
   border: 1px solid #c9ccd4; }
   @media (max-width: 1023px) {
     .feedback input {
@@ -415,13 +416,23 @@ img {
     .feedback input {
       padding: 13px 26px 9px 26px; } }
 
+.feedback input:hover {
+  background-color: #e3e3e4;
+  cursor: text; }
+  @media (max-width: 1023px) {
+    .feedback input:hover {
+      border-color: #68686a; } }
+
+.feedback input:focus {
+  background-color: #ffffff;
+  outline: none;
+  -webkit-box-shadow: 0 0 0 2px black inset;
+          box-shadow: 0 0 0 2px black inset; }
+
 .feedback input::-webkit-outer-spin-button,
 .feedback input::-webkit-inner-spin-button {
   -webkit-appearance: none;
           appearance: none; }
-
-.feedback input:hover {
-  border-color: #68686a; }
 
 .feedback input::-webkit-input-placeholder {
   font-family: "Open Sans", "Arial", sans-serif;
@@ -492,6 +503,15 @@ img {
 .feedback button:hover,
 .feedback button:focus {
   background-color: #09b1a0; }
+
+.feedback button:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 2px white inset;
+          box-shadow: 0 0 0 2px white inset; }
+  @media (max-width: 1023px) {
+    .feedback button:focus {
+      -webkit-box-shadow: 0 0 0 2px black inset;
+              box-shadow: 0 0 0 2px black inset; } }
 
 .feedback button:active {
   background-color: #0b8f82; }
@@ -992,6 +1012,8 @@ img {
     .contacts {
       grid-template-columns: -webkit-min-content;
       grid-template-columns: min-content;
+      grid-template-rows: -webkit-min-content;
+      grid-template-rows: min-content;
       padding: 0 20px;
       row-gap: 0; } }
 
@@ -1014,7 +1036,11 @@ img {
           justify-content: center; }
   @media (max-width: 767px) {
     .contacts a {
-      margin-right: -5px; } }
+      justify-self: center;
+      margin-right: -5px;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content; } }
 
 .contacts a:hover,
 .contacts a:focus {

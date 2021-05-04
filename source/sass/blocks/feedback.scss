@@ -45,6 +45,7 @@
   font-size: 15px;
   line-height: 24px;
   color: $text-color-darken;
+  background-color: $main-background-color;
   border: 1px solid #c9ccd4;
 
   @include tablet {
@@ -56,13 +57,24 @@
   }
 }
 
+.feedback input:hover {
+  background-color: #e3e3e4;
+  cursor: text;
+
+  @include tablet {
+    border-color: #68686a;
+  }
+}
+
+.feedback input:focus {
+  background-color: $main-background-color;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 1) inset;
+}
+
 .feedback input::-webkit-outer-spin-button,
 .feedback input::-webkit-inner-spin-button {
   appearance: none;
-}
-
-.feedback input:hover {
-  border-color: #68686a;
 }
 
 .feedback input::placeholder {
@@ -100,6 +112,15 @@
 .feedback button:hover,
 .feedback button:focus {
   background-color: $special-contrast-color-hover;
+}
+
+.feedback button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgb(255, 255, 255) inset;
+
+  @include tablet {
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 1) inset;
+  }
 }
 
 .feedback button:active {
