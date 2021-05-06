@@ -12,8 +12,8 @@ function mainFunc() {
   var menuOpenClass = 'site-nav--open';
   var menuNojsClass = 'site-nav--nojs';
 
-  var bodyScrollHiddenClass = 'page__body--scroll-hidden';
-  var bodyVisibilityHiddenClass = 'page__body--visibility-hidden';
+  var bodyScrollHiddenClass = 'page-body--scroll-hidden';
+  var bodyVisibilityHiddenClass = 'page-body--visibility-hidden';
 
   // Заблокировать скролл страницы
   function bodyScrollHidden(flag) {

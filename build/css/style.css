@@ -27,6 +27,9 @@
   font-weight: 700; }
 
 html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
@@ -49,12 +52,7 @@ img {
   border: 0;
   clip: rect(0 0 0 0); }
 
-.page {
-  margin: 0;
-  padding: 0;
-  height: 100%; }
-
-.page__body {
+.page-body {
   margin: 0 auto;
   padding: 0;
   min-height: 100%;
@@ -66,11 +64,11 @@ img {
   overflow-x: hidden; }
 
 @media (max-width: 1023px) {
-  .page__body--scroll-hidden {
+  .page-body--scroll-hidden {
     overflow: hidden; } }
 
 @media (max-width: 1023px) {
-  .page__body--visibility-hidden {
+  .page-body--visibility-hidden {
     visibility: hidden; } }
 
 .page-header {
